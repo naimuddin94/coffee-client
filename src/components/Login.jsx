@@ -14,13 +14,16 @@ const Login = () => {
       .then((result) => {
         form.reset();
         const user = result.user;
-        fetch(`http://localhost:5000/users/${email}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            lastSignInTime: user.metadata.lastSignInTime,
-          }),
-        })
+        fetch(
+          `https://coffee-server-ebwvq7sv5-naimuddin94.vercel.app/users/${email}`,
+          {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lastSignInTime: user.metadata.lastSignInTime,
+            }),
+          }
+        )
           .then((res) => res.json())
           .then((data) => console.log(data));
         Swal.fire({
