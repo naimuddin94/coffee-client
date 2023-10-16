@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const User = () => {
   const loadedUsers = useLoaderData();
-  const [users, setUsers] = useState(loadedUsers || []);
+  const [users, setUsers] = useState(loadedUsers);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -49,22 +49,23 @@ const User = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
-            <tr key={user._id}>
-              <th>{user.email}</th>
-              <td>{user.gender}</td>
-              <td>{user.creationTime}</td>
-              <td>{user.lastSignInTime}</td>
-              <td>
-                <button
-                  onClick={() => handleDelete(user._id)}
-                  className="btn-sm btn-outline"
-                >
-                  ❌
-                </button>
-              </td>
-            </tr>
-          ))}
+          {users &&
+            users.map((user) => (
+              <tr key={user._id}>
+                <th>{user.email}</th>
+                <td>{user.gender}</td>
+                <td>{user.creationTime}</td>
+                <td>{user.lastSignInTime}</td>
+                <td>
+                  <button
+                    onClick={() => handleDelete(user._id)}
+                    className="btn-sm btn-outline"
+                  >
+                    ❌
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
