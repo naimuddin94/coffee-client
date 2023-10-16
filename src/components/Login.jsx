@@ -15,7 +15,7 @@ const Login = () => {
         form.reset();
         const user = result.user;
         fetch(
-          `https://coffee-server-ebwvq7sv5-naimuddin94.vercel.app/users/${email}`,
+          `https://coffee-server-ep32z2ezb-naimuddin94.vercel.app/users/${email}`,
           {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },

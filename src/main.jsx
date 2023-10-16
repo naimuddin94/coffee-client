@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "/user",
         element: <User />,
         loader: () =>
-          fetch("https://coffee-server-ebwvq7sv5-naimuddin94.vercel.app/users"),
+          fetch("https://coffee-server-ep32z2ezb-naimuddin94.vercel.app/users"),
       },
     ],
   },

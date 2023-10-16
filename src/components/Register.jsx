@@ -20,7 +20,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         form.reset();
-        fetch("https://coffee-server-ebwvq7sv5-naimuddin94.vercel.app/users", {
+        fetch("https://coffee-server-ep32z2ezb-naimuddin94.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

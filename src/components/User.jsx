@@ -18,7 +18,7 @@ const User = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://coffee-server-ebwvq7sv5-naimuddin94.vercel.app/users/${id}`,
+          `https://coffee-server-ep32z2ezb-naimuddin94.vercel.app/users/${id}`,
           {
             method: "DELETE",
           }
